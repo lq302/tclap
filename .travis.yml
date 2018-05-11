@@ -1,0 +1,23 @@
+language: cpp
+dist: trusty
+sudo: false
+
+matrix:
+  include:
+    - os: linux
+      compiler: gcc
+    - os: linux
+      compiler: clang
+      install:
+        - export CXX="/usr/local/clang-5.0.0/bin/clang++"
+        - export CC="/usr/local/clang-5.0.0/bin/clang"
+        - export CPATH="/usr/local/clang-5.0.0/include/c++/v1"
+        - export LD_LIBRARY_PATH="/usr/local/clang-5.0.0/lib"
+        - export LDFLAGS="-stdlib=libc++ -lc++abi"
+    - os: osx
+
+script:
+  # Run configure, if it fails print the log
+  - ./configure || cat config.log
+  # If configure failed, make check will fail (no generated Makefile)
+  - make check

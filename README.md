@@ -1,5 +1,7 @@
 # TCLAP - Templatized Command Line Argument Parser
 
+[![Travis CI Build Status](https://travis-ci.com/svenevs/tclap.svg?branch=master)](https://travis-ci.com/svenevs/tclap)
+
 This is a simple C++ library that facilitates parsing command line
 arguments in a type independent manner.  It doesn't conform exactly
 to either the GNU or POSIX standards, although it is close.  See
