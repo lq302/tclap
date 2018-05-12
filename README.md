@@ -20,7 +20,7 @@ This repository is a "mirror" of the original host, with a _minimal_ CMake build
 system.  See the official website here: http://tclap.sourceforge.net/
 
 At this time the current version is 1.2.2.  _Please raise an issue if a newer
-version bas been released on sourceforge but not here_.
+version has been released on sourceforge but not here_.
 
 When adding the submodule, each version will be tagged to correspond with
 sourceforge releases.  Check `git tag -l` and `checkout` the corresponding
@@ -44,6 +44,7 @@ target_link_libraries(your_target tclap)
 # Option 2: if you need to add to a list or something
 get_target_property(TCLAP_INCLUDE_DIRS tclap INTERFACE_INCLUDE_DIRECTORIES)
 # You can now use ${TCLAP_INCLUDE_DIRS}
+# Or honestly...just use the 2.x approach in the next section...
 ```
 
 ## For CMake 2.x
